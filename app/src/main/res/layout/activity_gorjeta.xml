@@ -7,13 +7,14 @@
     tools:context=".GorjetaActivity">
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginStart="73dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="41dp"
+        android:max="30"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/textViewPorcentagem"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar2"
-        app:layout_constraintEnd_toEndOf="@+id/seekBar2" />
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar" />
 
     <TextView
         android:id="@+id/textView2"
@@ -36,7 +37,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="41dp"
         android:text="@string/txt_valor"
-        app:layout_constraintStart_toStartOf="@+id/seekBar2"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/editTextValor" />
 
     <EditText
@@ -58,7 +59,7 @@
         android:layout_marginBottom="42dp"
         android:text="@string/txt_gorjeta"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/seekBar2" />
+        app:layout_constraintStart_toStartOf="@+id/seekBar" />
 
     <TextView
         android:id="@+id/textViewGorjeta"
@@ -66,8 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/seekBar2"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <TextView
         android:id="@+id/textViewPorcentagem"
@@ -76,9 +77,9 @@
         android:layout_marginEnd="69dp"
         android:layout_marginBottom="9dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seekBar2" />
+        app:layout_constraintStart_toEndOf="@+id/seekBar" />
 
     <TextView
         android:id="@+id/textView6"

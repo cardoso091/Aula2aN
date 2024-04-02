@@ -15,11 +15,4 @@
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="89dp" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="233dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

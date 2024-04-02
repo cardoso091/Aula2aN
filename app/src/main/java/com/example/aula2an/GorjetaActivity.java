@@ -57,10 +57,28 @@ public class GorjetaActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {}
         });
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                porcentagem = progress/100.0;
+                atualizarValores();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
 
     }
     private void atualizarValores(){
         textViewValor.setText(currencyFormat.format(valor));
+        textViewPorcentagem.setText(percentFormat.format(porcentagem));
+        double gorjeta = valor * porcentagem;
+        textViewGorjeta.setText(currencyFormat.format(gorjeta));
+        double total = valor + gorjeta;
+        textViewTotal.setText(currencyFormat.format(total));
 
     }
 
