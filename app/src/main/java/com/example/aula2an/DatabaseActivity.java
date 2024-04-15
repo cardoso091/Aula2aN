@@ -54,6 +54,5 @@ public class DatabaseActivity extends AppCompatActivity {
         Funcionario f = new Funcionario(RE, nome, dataAdmissao, salario);
         dao.insert(f);
         limpar();
-
     }
 }
