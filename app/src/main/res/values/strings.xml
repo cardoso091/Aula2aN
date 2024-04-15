@@ -3,4 +3,10 @@
     <string name="txt_gorjeta">Gorjeta</string>
     <string name="txt_valor">Valor</string>
     <string name="txt_total">Total</string>
+    <string name="txt.database">Database</string>
+    <string name="txt.re">RE</string>
+    <string name="txt.nome">Nome</string>
+    <string name="txt.dataadm">Data de Adm</string>
+    <string name="txt.salario">Salário</string>
+    <string name="txt.cadastrar">Cadastrar</string>
 </resources>
