@@ -38,6 +38,7 @@ public class DatabaseActivity extends AppCompatActivity {
         editTextSalario.getText().clear();
     }
 
+
     public void cadastrar(View view){
         AppDatabase db = AppDatabase.getInstance(this);
         FuncionarioDao dao = db.funcionarioDao();
