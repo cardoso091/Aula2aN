@@ -18,6 +18,7 @@ public class DatabaseActivity extends AppCompatActivity {
     private EditText editTextNome;
     private EditText editTextDatadeAdm;
     private EditText editTextSalario;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
 
 
     @Override
@@ -44,7 +45,6 @@ public class DatabaseActivity extends AppCompatActivity {
         FuncionarioDao dao = db.funcionarioDao();
         int RE = Integer.parseInt(editTextRe.getText().toString());
         String nome = editTextNome.getText().toString();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy");
         Date dataAdmissao;
         try {
             dataAdmissao = dateFormat.parse(editTextDatadeAdm.getText().toString());
@@ -53,7 +53,24 @@ public class DatabaseActivity extends AppCompatActivity {
         }
         double salario = Double.parseDouble(editTextSalario.getText().toString());
         Funcionario f = new Funcionario(RE, nome, dataAdmissao, salario);
-        dao.insert(f);
+        if (view.getId() == R.id.button3){
+            dao.insert(f);
+        } else if (view.getId() == R.id.button4) {
+            dao.update(f);
+        } else {
+            dao.delete(f);
+        }
         limpar();
+    }
+
+    public void buscar (View view){
+        AppDatabase db = AppDatabase.getInstance(this);
+        FuncionarioDao dao = db.funcionarioDao();
+        int re =Integer.parseInt(editTextRe.getText().toString());
+        Funcionario f = dao.buscarPeloRe(re);
+        editTextNome.setText(f.getNome());
+        editTextDatadeAdm.setText(dateFormat.format(f.getDataAdmissao()));
+        editTextSalario.setText(Double.toString(f.getSalario()));
+
     }
 }
