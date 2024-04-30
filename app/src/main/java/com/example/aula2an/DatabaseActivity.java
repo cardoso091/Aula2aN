@@ -2,6 +2,7 @@ package com.example.aula2an;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -73,4 +74,10 @@ public class DatabaseActivity extends AppCompatActivity {
         editTextSalario.setText(Double.toString(f.getSalario()));
 
     }
+
+    public void lista(View view) {
+        Intent intent = new Intent(this, ListActivity.class);
+        startActivity(intent);
+    }
+
 }
